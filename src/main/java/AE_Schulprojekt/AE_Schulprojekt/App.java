@@ -1,7 +1,7 @@
 package AE_Schulprojekt.AE_Schulprojekt;
 
 /**
- * Hello world!
+ * Hello world! test
  *
  */
 public class App 
