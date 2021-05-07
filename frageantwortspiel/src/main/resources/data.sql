@@ -2,6 +2,9 @@ INSERT INTO Fach (PK_FACH)
 VALUES ('Deutsch');
 
 INSERT INTO Fach (PK_FACH)
+VALUES ('Mathe');
+
+INSERT INTO Fach (PK_FACH)
 VALUES ('Englisch');
 
 INSERT INTO Thema (PK_THEMA, FK_FACH)

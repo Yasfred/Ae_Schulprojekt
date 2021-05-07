@@ -25,6 +25,8 @@ public class MainMenuController extends JFrame{
 
     private void initUI() {
 
+        System.out.println(f.findAll().toString());
+
 //        List<Fach> result = f.findAll();
         List<JButton> buttons = new ArrayList<>();
 //
