@@ -13,7 +13,7 @@ public class Cours_Panel extends JPanel {
 	public Cours_Panel() {
 		//Fächer aus der Datenbank ziehen
 		//TestList mit Testfächern
-		ArrayList<String> faecher = new ArrayList<>();
+		ArrayList<String> faecher = new ArrayList<String>();
 		faecher.add("Mathe");
 		faecher.add("Deutsch");
 		faecher.add("ITS");
@@ -25,8 +25,7 @@ public class Cours_Panel extends JPanel {
 		for(int i = 0; i < faecher.size(); i++) {
 			JButton button = new JButton(faecher.get(i));
 			button.addActionListener(new ActionListener() {
-				
-				@Override
+
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					

@@ -12,7 +12,7 @@ public class Game extends Canvas{
 
 	private static final long serialVersionUID = 1L;
 
-	private final List<Drawable> drawables = new ArrayList<> ();
+	private final List<Drawable> drawables = new ArrayList<Drawable> ();
 
     /**
      * Window Constants
