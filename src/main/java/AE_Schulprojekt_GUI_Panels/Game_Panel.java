@@ -16,7 +16,6 @@ public class Game_Panel extends JPanel{
 	public Game_Panel(JFrame frame) {
 		//Buttons GAME
 		Icon iconDoor = new ImageIcon("src/main/java/Images/Door.png");
-		Icon iconDoor2 = null;
 		
 		//1st DOOR Button
 		JButton door1 = new JButton(iconDoor);
@@ -30,7 +29,7 @@ public class Game_Panel extends JPanel{
 		});
 		//2nd DOOR Button
 		JButton door2 = new JButton(iconDoor);
-		door2.setSize(500,50);
+		door2.setBounds(100 ,200 , 500,50);
 		door2.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
