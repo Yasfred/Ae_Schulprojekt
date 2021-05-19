@@ -22,7 +22,6 @@ public class Menu_Panel extends JPanel{
 		JButton admin_Button = new JButton("Admin");
 		JButton close_Button = new JButton("Beenden");
 		
-		setSize(900, 550);
 		// StartButton
 	
 					start_Button.setBounds(50, 300, 200, 300);
@@ -64,6 +63,7 @@ public class Menu_Panel extends JPanel{
 					admin_Button.addActionListener(new ActionListener() {
 
 						public void actionPerformed(ActionEvent e) {
+							Game.Start(Page.ADMIN);
 
 						}
 					});
@@ -73,6 +73,8 @@ public class Menu_Panel extends JPanel{
 					close_Button.addActionListener(new ActionListener() {
 
 						public void actionPerformed(ActionEvent e) {
+							
+							
 						}
 					});
 		

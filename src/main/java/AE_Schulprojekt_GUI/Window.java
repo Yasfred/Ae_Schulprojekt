@@ -23,10 +23,6 @@ public class Window {
 				break;
 		}
 		
-		
-		
-
-		System.out.println(frame.getSize());
 
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
