@@ -2,6 +2,7 @@ package AE_Schulprojekt_GUI_Panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import AE_Schulprojekt_GUI.Game;
@@ -24,12 +26,12 @@ public class Menu_Panel{
 
 	public static void addMenuPanel(final JFrame frame) {
 		//Panel Größe
-		int height = 35;
-		int width = 170;
+		final int height = 35;
+		final int width = 170;
 
 		//Hier werden alle Panels erstellt die auf das Frame kommen
 		//Panel für das ausgewählte Fach
-		JPanel fach_Panel = new JPanel(new FlowLayout());
+		final JPanel fach_Panel = new JPanel(new FlowLayout());
 		//Panel für start Button
 		JPanel start_Panel = new JPanel(new FlowLayout());
 		//Panel für Fach wählen Button
@@ -40,20 +42,23 @@ public class Menu_Panel{
 		final JPanel faecher_Panel = new JPanel();
 		//Panel alles klappt
 		JPanel nutz_Panel = new JPanel();
-
 		//frame die Panels adden
 		frame.add(fach_Panel);
 		frame.add(start_Panel);
 		frame.add(cours_Panel);
 		frame.add(option_Panel);
+		frame.add(faecher_Panel);
 		frame.add(nutz_Panel);
 
 		//Button
 		JButton start_Button = new JButton("Start");
-		JButton change_Course = new JButton("Fach wählen");
+		JButton change_Course = new JButton("Fach & Themen");
 		JButton admin_Button = new JButton("Admin");
 		JButton close_Button = new JButton("Beenden");
 
+		//FachPanel
+		fach_Panel.setBounds(20, 215, width, height);
+		
 		//startPanel
 		start_Panel.setBounds(20, 250, width, height);
 		start_Panel.add(start_Button);
@@ -81,9 +86,7 @@ public class Menu_Panel{
 		change_Course.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				frame.add(faecher_Panel);
-				faecher_Panel.setBackground(Color.black);
-				addCours_Panel(frame, faecher_Panel);
+				faecher_Panel.setVisible(true);
 			}
 		});
 
@@ -115,34 +118,43 @@ public class Menu_Panel{
 				frame.dispose();
 			}
 		});
-	}
-
-	public static void addCours_Panel(JFrame frame, JPanel faecher_Panel) {
-		faecher_Panel.setBounds(200,0,200,200);
-		faecher_Panel.setBackground(Color.blue);
-		faecher_Panel.removeAll();
-		ArrayList<String> faecher = new ArrayList<String>();
+		
+		//ThemenButton
+		faecher_Panel.setBounds(250,0,650,515);
+		final ArrayList<String> faecher = new ArrayList<String>();
+		final ArrayList<JLabel> labels = new ArrayList<JLabel>();
 		faecher.add("Mathe");
 		faecher.add("Deutsch");
 		faecher.add("ITS");
 		faecher.add("AE");
-		faecher.add("Politik");
+		faecher.add("Politik");		
 		double rows = faecher.size()/2.;
 		rows = Math.round(rows);
 		faecher_Panel.setLayout(new java.awt.GridLayout((int) rows,0));
 		for(int i = 0; i < faecher.size(); i++) {
 			JButton button = new JButton(faecher.get(i));
-			button.addActionListener(new ActionListener() {
-
+			final int j = i;
+			final JLabel label = new JLabel(faecher.get(j));
+			labels.add(label);
+			label.setVisible(false);
+			fach_Panel.add(label);
+			button.addActionListener(new ActionListener() {				
 				public void actionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
-
+					for(int i = 0; i < labels.size();i++) {
+						JLabel labe = labels.get(i);
+						labe.setVisible(false);
+					}
+						label.setVisible(true);
+					
 				}
 			});
+			
 			faecher_Panel.add(button);
 		}
-
-		frame.remove(faecher_Panel);
-		frame.add(faecher_Panel);
+		faecher_Panel.setVisible(false);
+		
 	}
+
+
+	
 }

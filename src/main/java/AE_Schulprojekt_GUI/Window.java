@@ -1,10 +1,10 @@
 package AE_Schulprojekt_GUI;
 
 
-import java.awt.;
-import javax.swing.;
 
-import AE_Schulprojekt_GUI_Panels.Game_Panel;
+
+import javax.swing.JFrame;
+
 import AE_Schulprojekt_GUI_Panels.Menu_Panel;
 
 public class Window {
