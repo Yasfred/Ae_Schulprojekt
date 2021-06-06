@@ -5,6 +5,7 @@ package AE_Schulprojekt_GUI;
 
 import javax.swing.JFrame;
 
+import AE_Schulprojekt_GUI_Panels.Game_Panel;
 import AE_Schulprojekt_GUI_Panels.Menu_Panel;
 
 public class Window {
@@ -22,7 +23,7 @@ public class Window {
 				frame.add(new AE_Schulprojekt_GUI_Panels.Admin_Panel());
 				break;
 			case GAME:
-				frame.add(new AE_Schulprojekt_GUI_Panels.Game_Panel(frame));
+				Game_Panel.addGame_Panel(frame);
 				break;
 		}
 

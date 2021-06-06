@@ -24,13 +24,13 @@ public class Game extends Canvas{
      * Main Function, instantiating Game 
      */
     public static void main(String[]args) {
-        new Game ();
+        new Game (page);
     }
 
     /**
      * Game constructor, initialized by main ()
      */
-    public Game () {
+    public Game (Page page) {
     	Window window = null;
     	if(page == Page.MENU) {
     		int WIDTH = 900;
@@ -51,7 +51,7 @@ public class Game extends Canvas{
     }
     public static void Start(Page side) {
     	page = side;
-    	new Game();
+    	new Game(Page.GAME);
     }
 
     //shows all Courses you can choose
@@ -63,8 +63,6 @@ public class Game extends Canvas{
 		button.setBounds(100, 100, 100, 100);
 		button.setVisible(true);
 		frame.add(button);
-		System.out.println(frame.getComponents());
-		System.out.println(frame.getComponentCount());
 		
 		
 	}
