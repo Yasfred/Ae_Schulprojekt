@@ -194,7 +194,7 @@ public class Game_Panel {
 				Health_Panel.revalidate();
 				Health_Panel.repaint();
 			}
-		} else if (health > 0) {
+		} else if (health > 1) {
 			health -= 1;
 			addDoors();
 		}else {
