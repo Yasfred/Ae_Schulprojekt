@@ -34,7 +34,6 @@ public class Window {
 			start_Button.setForeground(Color.WHITE);
 			start_Button.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					frame.dispose();
 					Game.Start(Page.GAME);
@@ -47,7 +46,6 @@ public class Window {
 			change_Course.setForeground(Color.WHITE);
 			change_Course.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 
 					change_Course.setVisible(false);
@@ -65,7 +63,6 @@ public class Window {
 			settings_Button.setForeground(Color.WHITE);
 			settings_Button.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 
 				}
@@ -75,7 +72,6 @@ public class Window {
 			admin_Button.setBounds(50, 450, 100, 15);
 			admin_Button.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 
 				}
@@ -85,7 +81,6 @@ public class Window {
 			close_Button.setBounds(150, 450, 100, 15);
 			close_Button.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					frame.dispose();
 				}
@@ -111,7 +106,6 @@ public class Window {
 			door1.setBounds(100, 200, 160, 301);
 			door1.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 
@@ -122,7 +116,6 @@ public class Window {
 			door2.setBounds(330, 200, 160, 301);
 			door2.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 
@@ -133,7 +126,7 @@ public class Window {
 			door3.setBounds(560, 200, 160, 301);
 			door3.addActionListener(new ActionListener() {
 
-				@Override
+				
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 
@@ -144,7 +137,6 @@ public class Window {
 			door4.setBounds(790, 200, 160, 301);
 			door4.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 
@@ -155,7 +147,6 @@ public class Window {
 			door5.setBounds(1020, 200, 160, 301);
 			door5.addActionListener(new ActionListener() {
 
-				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 
