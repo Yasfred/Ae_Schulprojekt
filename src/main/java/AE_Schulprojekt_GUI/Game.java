@@ -42,12 +42,7 @@ public class Game extends Canvas{
     		int HEIGHT = 720;
     		window = new Window (WIDTH, HEIGHT, TITLE, this, page);
     	}
-    	else if(page == Page.ADMIN) {
-    		int WIDTH = 1280;
-    		int HEIGHT = 720;
-    		window = new Window (WIDTH, HEIGHT, TITLE, this, page);
-    	}
-    	System.out.println(window);
+    	
     }
     public static void Start(Page side) {
     	page = side;

@@ -19,9 +19,6 @@ public class Window {
 			case MENU:
 				Menu_Panel.addMenuPanel(frame);
 				break;
-			case ADMIN:
-				frame.add(new AE_Schulprojekt_GUI_Panels.Admin_Panel());
-				break;
 			case GAME:
 				Game_Panel.addGame_Panel(frame);
 				break;

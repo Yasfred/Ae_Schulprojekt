@@ -60,7 +60,7 @@ public class Menu_Panel{
 		//Button
 		JButton start_Button = new JButton("Start");
 		JButton change_Course = new JButton("Fach & Themen");
-		JButton admin_Button = new JButton("Admin");
+		
 		JButton close_Button = new JButton("Beenden");
 
 		//Alert Panel
@@ -119,26 +119,14 @@ public class Menu_Panel{
 
 		//option Panel
 		option_Panel.setBounds(20, 320, width, height);
-		option_Panel.add(admin_Button);
 		option_Panel.add(close_Button);
-		// AdminButton
-		admin_Button.setPreferredSize(new Dimension(80,30));
-		admin_Button.setBackground(Color.BLACK);
-		admin_Button.setForeground(Color.WHITE);
-		admin_Button.setFont(new Font("Times New Roman", Font.PLAIN, 12));
-		admin_Button.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				Game.Start(Page.ADMIN);
-
-			}
-		});
+		
 
 		// closeButton
-		close_Button.setPreferredSize(new Dimension(80,30));
+		close_Button.setPreferredSize(new Dimension(165,30));
 		close_Button.setBackground(Color.BLACK);
 		close_Button.setForeground(Color.WHITE);
-		close_Button.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		close_Button.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		close_Button.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
