@@ -38,8 +38,8 @@ public class Game extends Canvas{
     		window = new Window (WIDTH, HEIGHT, TITLE, this, page);
     	}
     	else if(page == Page.GAME){
-    		int WIDTH = 1280;
-    		int HEIGHT = 720;
+    		int WIDTH = 1920;
+    		int HEIGHT = 1080;
     		window = new Window (WIDTH, HEIGHT, TITLE, this, page);
     	}
     	

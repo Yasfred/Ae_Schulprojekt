@@ -138,11 +138,7 @@ public class Menu_Panel{
 		faecher_Panel.setBounds(250,0,650,515);
 		final ArrayList<String> faecher = new ArrayList<String>();
 		final ArrayList<JLabel> labels = new ArrayList<JLabel>();
-		faecher.add("Mathe");
-		faecher.add("Deutsch");
-		faecher.add("ITS");
-		faecher.add("AE");
-		faecher.add("Politik");		
+		faecher.add("AE");	
 		double rows = faecher.size()/2.;
 		rows = Math.round(rows);
 		faecher_Panel.setLayout(new java.awt.GridLayout((int) rows,0));

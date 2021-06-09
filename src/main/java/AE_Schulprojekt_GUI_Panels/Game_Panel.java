@@ -52,13 +52,13 @@ public class Game_Panel {
 		Health_Panel.setBounds(0, 0, 100, 30);
 
 		// Fragen_Panel
-		Fragen_Panel.setBounds(0, 45, 1320, 30);
+		Fragen_Panel.setBounds(0, 55, 1920, 55);
 		JLabel label = new JLabel(frageAntworten[0]);
 		label.setFont(new Font("Times New Roman", Font.PLAIN, 26));
 		Fragen_Panel.add(label);
 
 		// Door_Panel
-		Door_Panel.setBounds(0, 100, 1280, 720);
+		Door_Panel.setBounds(0, 200, 1920, 1080);
 
 		addDoors();
 
@@ -151,14 +151,23 @@ public class Game_Panel {
 	}
 
 	private static void getFragenundAntworten() {
-		final ArrayList<String> FrageMathe1 = new ArrayList<String>();
-		FrageMathe1.add("Was ist 1 + 1;2;4;6;8;9;1;1");
-		FrageMathe1.add("Was ist 2 + 2;20;40;60;4;09;4;1");
-		FragenundAntworten = FrageMathe1;
+		final ArrayList<String> AEFragen = new ArrayList<String>();
+		AEFragen.add("Welche Art einer Schleife gibt es?/Do-While Schleife/While-Do Schleife/Dauerschleife/Induktionsschleife/True-False-Schleife/1/1");
+		AEFragen.add("Mit welchem Befehl kann man eine Schleife abbrechen ?/Stop/End/Leave/Break/Terminate/4/1");
+		AEFragen.add("Welcher Methoden-Kopf ist richtig ?/public static void printHello()/public void static printBye()/public String void printNull()/public String()/public void String printString()/1/1");
+		AEFragen.add("Welche Art von return-Statement ist richtig ?/return/Return boolean/String return/Return int/Return 'richtig'/5/1");		
+		AEFragen.add("Mit welchem Begriff werden Methoden von außen nicht zugänglich ?/Public/Static/Void/Ptivate/Final/4/2");		
+		AEFragen.add("Welcher Übergabeparameter ist falsch ?/public void printText(int …Zahlen)/public void printText(int Zahl)/public void printText(String Name)/public void printText(Tiere[])/public void printText(double [] Zahlen)/4/2");
+		AEFragen.add("Welcher Schleifenkopf ist richtig ?/Do-While(true)/While{}/For(true)/Do(true)/While(true){}/5/2");
+		AEFragen.add("Welche Ausgabe erzeugt folgende Schleife ?:for(int i=0; i<10; i++){System.out.print(i + “, ”);if (i == 5){break;}}/'0, 1, 2, 3, 4, 5, '/'1,2,3,4,5,'/'1,2,3,4,5,6,7,8,9,10,'/'12345678910'/Nullpointer Exception/1/3");
+		AEFragen.add("Welche Art von Methode gibt es nicht ?/Rekursive/Statische/Main/Abstrakt/Final/5/3");
+		AEFragen.add("Was ist an dem Schleifenkopf falsch ?\r\n"
+				+ " for(int i = 0; i <  10; i--)/Nichts, ist alles richtig/'i' ist immer kleiner als 10/'i--' gibt es nicht/For-Schleifen haben nur eine Bedingung im Kopf/Falscher Variabeln-Typ/2/2");
+		FragenundAntworten = AEFragen;
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// hier muss man mit dem text die Fragen aus der Datenbank üpber Hibernate holen
 
-		frageAntworten = FrageMathe1.get(i).split(";");
+		frageAntworten = AEFragen.get(i).split("/");
 		richtigeAntwort = frageAntworten[6];
 		schwierigkeit = frageAntworten[7];
 
